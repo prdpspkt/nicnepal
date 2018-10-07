@@ -39,11 +39,7 @@ class CompaniesController extends Controller
             ]);
             $logo = $request->file('logo');
             $logo_name    = time() . '.' . $logo->getClientOriginalExtension();
-            $image_resize = Image::make($logo->getRealPath());
-            $image_resize->resize(100, 100);
-            $image_resize->save(public_path('images/logos/' .$logo_name));
-            $destinationPath = public_path('/images/logos');
-            $logo->move($destinationPath, $logo_name);
+            $image = Image::make($logo->getRealPath())->resize(100, 100)->save(public_path('images/logos/' .$logo_name));
             $company->logo = "/images/logos/" . $logo_name;
         }
         else{
@@ -82,11 +78,7 @@ class CompaniesController extends Controller
             $old_logo = $company->logo;
             $logo = $request->file('logo');
             $logo_name = time() . '.' . $logo->getClientOriginalExtension();
-            $image_resize = Image::make($logo->getRealPath());
-            $image_resize->resize(100, 100);
-            $image_resize->save(public_path('/images/logos/' .$logo_name));
-            $destinationPath = public_path('/images/logos');
-            $logo->move($destinationPath, $logo_name);
+            $image = Image::make($logo->getRealPath())->resize(100, 100)->save(public_path('/images/logos/' .$logo_name));
             $company->logo = "/images/logos/" . $logo_name;
             if(file_exists(public_path($old_logo))){
                 unlink(public_path($old_logo));
