@@ -18,7 +18,7 @@
                     @if($companies != null)
                     @foreach($companies as $company)
                         <tr>
-                            <td><img src="{{$company->logo}}"/></td>
+                            <td><img style="width: 50px; height: auto;" src="{{$company->logo}}"/></td>
                             <td>{{$company->name}}</td>
                             <td>{{$company->address}}</td>
                             <td>{{$company->phone}}</td>
