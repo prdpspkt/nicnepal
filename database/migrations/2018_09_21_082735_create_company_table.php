@@ -13,14 +13,15 @@ class CreateCompanyTable extends Migration
      */
     public function up()
     {
-        Schema::create('logos', function (Blueprint $table) {
+        Schema::create('companies', function (Blueprint $table) {
             $table->increments('id');
             $table->string("name");
             $table->string("address");
+            $table->integer('office_type_id');
             $table->text("about");
             $table->string("phone");
-            $table->string("email")->nullable();
-            $table->string("fax")->nullable();
+            $table->string("email")->nullable(true);
+            $table->string("fax")->nullable(true);
             $table->integer("user_id");
             $table->string("logo")->default("/images/default_logo.gif");
             $table->timestamps();
@@ -34,6 +35,6 @@ class CreateCompanyTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('logos');
+        Schema::dropIfExists('companies');
     }
 }

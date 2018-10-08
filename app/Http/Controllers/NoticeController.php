@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\NoticeType;
 use Illuminate\Http\Request;
 use App\Notice;
 use Auth;
@@ -21,7 +22,9 @@ class NoticeController extends Controller
     }
 
     function add(){
-        return view("notices.add");
+        $data['notice_types'] = NoticeType::pluck('name', 'id')->all();
+        $data['offices'] = Auth::user()->companies()->pluck('name', 'id')->all();
+        return view("notices.add", $data);
     }
 
     function create(Request $request){
@@ -29,10 +32,10 @@ class NoticeController extends Controller
         $title = $request->input('title');
         $description = $request->input('description');
         $content = $request->input('content');
-        $notice_type = $request->input('notice_type');
+        $notice_type = $request->input('notice_type_id');
         $notice_url = $request->input('notice_url');
         $published= $request->input('published');
-        $company_id = 1; // $request->input("company_id") = 1;
+        $company_id =  $request->input("company_id");
 
         $notice_data = array(
             "title" => $title,
@@ -54,15 +57,17 @@ class NoticeController extends Controller
         $notice->title = $request->input('title');
         $notice->description = $request->input('description');
         $notice->content = $request->input('content');
-        $notice->notice_type = $request->input('notice_type');
+        $notice->notice_type_id = $request->input('notice_type_id');
         $notice->notice_url = $request->input('notice_url');
         $notice->published= $request->input('published');
-        $notice->company_id = 1; // $request->input("company_id") = 1;
+        $notice->company_id = $request->input("company_id");
         $notice->save();
         return redirect('notices');
     }
 
     public function edit($id){
+        $data['notice_types'] = NoticeType::pluck('name', 'id')->all();
+        $data['offices'] = Auth::user()->companies()->pluck('name', 'id')->all();
         $notice = $this->canChange($id);
         if($notice != false){
             $data['notice'] = $notice;

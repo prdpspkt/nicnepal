@@ -9,6 +9,11 @@
                 <h3>Add a Company</h3>
 
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <div class="form-group">
+                    <label>Office Type</label>
+                    {!! Form::select('office_type_id', $office_types ,null, ['class' => 'form-control']) !!}
+
+                </div>
 
                     <div class="form-group">
                         <label>Name </label>

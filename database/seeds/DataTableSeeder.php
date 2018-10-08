@@ -19,6 +19,7 @@ class DataTableSeeder extends Seeder
         $company->phone = "9845659107";
         $company->fax = "9857659107";
         $company->user_id = 1;
+        $company->office_type_id = 1;
         $company->about = "Nothing to tell all know about this";
         $company->save();
 
@@ -26,7 +27,7 @@ class DataTableSeeder extends Seeder
         $company->title = "मेरिट लिष्टको लागि कलेज रोज्ने सम्बन्धी सूचना/पोखरा विश्वविद्यालय";
         $company->description = "मेरिट लिष्टको लागि कलेज रोज्ने सम्बन्धी सूचना/पोखरा विश्वविद्यालय";
         $company->published = "२०७५-०६-०७";
-        $company->notice_type = "schlorship";
+        $company->notice_type_id =1;
         $company->user_id = 1;
         $company->company_id = 1;
         $company->content = "Nothing to tell all know about this";

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\OfficeType;
 use Illuminate\Http\Request;
 use Auth;
 use App\Company;
@@ -23,8 +24,8 @@ class CompaniesController extends Controller
 
     public function add()
     {
-
-        return view('companies.add');
+        $data['office_types'] = OfficeType::pluck('name', 'id')->all();
+        return view('companies.add', $data);
 
     }
 
@@ -39,7 +40,7 @@ class CompaniesController extends Controller
             ]);
             $logo = $request->file('logo');
             $logo_name    = time() . '.' . $logo->getClientOriginalExtension();
-            $image = Image::make($logo->getRealPath())->resize(100, 100)->save(public_path('images/logos/' .$logo_name));
+            Image::make($logo->getRealPath())->resize(100, 100)->save(public_path('images/logos/' .$logo_name));
             $company->logo = "/images/logos/" . $logo_name;
         }
         else{
@@ -51,6 +52,7 @@ class CompaniesController extends Controller
 
     public function edit($id)
     {
+        $data['office_types'] = OfficeType::pluck('name', 'id')->all();
         $data['company'] = Company::find($id);
         return view("companies.edit", $data);
     }
@@ -71,6 +73,7 @@ class CompaniesController extends Controller
         $company->phone = $input['phone'];
         $company->fax = $input['fax'];
         $company->about = $input['about'];
+        $company->office_type_id = $input['office_type_id'];
         if($request->hasFile('logo')) {
             $this->validate($request, [
                 'logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',

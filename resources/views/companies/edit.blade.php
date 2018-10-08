@@ -6,10 +6,14 @@
     <div class="container">
         <form class="row" method="post" action="/companies/edit/{{$company->id}}" enctype="multipart/form-data">
             <div class="col-md-8">
-                <h3>Edit a Company<small>{{$company->name}}</small></h3>
+                <h3>Edit a Office | <small>{{$company->name}}</small></h3>
 
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <div class="form-group">
+                    <label>Office Type</label>
+                    {!! Form::select('office_type_id', $office_types, $company->office_type_id, ['class' => 'form-control']) !!}
 
+                </div>
                 <div class="form-group">
                     <label>Name </label>
                     <input class="form-control" type="text" name="name" value="{{$company->name}}" required>
@@ -22,17 +26,17 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" class="btn btn-sm btn-success" required value="Add"/>
+                    <input type="submit" class="btn btn-sm btn-success" required value="Update"/>
                 </div>
 
 
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <input type="submit" class="btn btn-sm btn-success float-right" required value="Add"/>
+                    <input type="submit" class="btn btn-sm btn-success float-right" required value="Update"/>
                 </div>
                 <div class="form-group">
-                    <label>Address: </label>
+                    <label>address: </label>
                     <textarea name="address" class="form-control" required>{{$company->address}}</textarea>
                 </div>
                 <div class="form-group">

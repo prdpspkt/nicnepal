@@ -19,7 +19,7 @@
                         <tr>
                             <td>{{$notice->title}}</td>
                             <td>{{$notice->description}}</td>
-                            <td>{{$notice->notice_type}}</td>
+                            <td>{{$notice->notice_type->name}}</td>
                             <td>{{$notice->published}}</td>
                             <th><a class="btn btn-sm btn-success" href="/notices/show/{{$notice->id}}">View</a> </th>
                             <th><a class="btn btn-sm btn-primary" href="/notices/edit/{{$notice->id}}">Edit</a> </th>

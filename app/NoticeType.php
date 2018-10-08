@@ -8,4 +8,8 @@ class NoticeType extends Model
 {
     protected $table = "notice_types";
     protected $fillable = ["name", "slug"];
+
+    function notices(){
+        return $this->hasMany('App\Notice');
+    }
 }

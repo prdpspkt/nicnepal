@@ -18,7 +18,7 @@ class CreateTableNotices extends Migration
             $table->string('title');
             $table->text('description');
             $table->text('content');
-            $table->string("notice_type");
+            $table->integer("notice_type_id");
             $table->string('notice_url')->nullable();
             $table->integer('company_id');
             $table->string('published');

@@ -35,6 +35,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
+
+                    @auth
                     @if(Auth::user()->is_admin)
                         <li class="nav-item">
                             <a class="nav-link" href="/office_types">Office Types</a>
@@ -50,6 +52,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/notices">Notices</a>
                     </li>
+                        @endauth
 
                 </ul>
 
