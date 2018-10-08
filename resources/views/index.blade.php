@@ -30,7 +30,7 @@
       <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="/images/default_logo.gif">
+                <img style="width: 50px;" src="/images/default_logo.gif">
             </div>
             <div class="col-md-9">
                 <h5>राष्ट्रिय सूचना केन्द्र <br>
@@ -38,7 +38,7 @@
             </div>
         </div>
           <a class="btn btn-success" href="#">Download App</a>
-        <a class="btn btn-primary" href="#">Publish your Notice</a>
+        <a class="btn btn-primary" href="/companies">PUBLISH YOUR NOTICE</a>
       </div>
     </nav>
 
