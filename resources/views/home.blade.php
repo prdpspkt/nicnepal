@@ -1,23 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
+ <link href="/css/landing-page.min.css" rel="stylesheet">
+ <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">सबै सूचनाहरू तथा जानकारीहरू अब तपाईको हातमै !!</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                <p> सार्वजनिक सूचना, जनहितमा जारी सूचना, रोजगार सम्बन्धी सूचना, कुनै कार्यक्रम सम्बन्धी जानकारी, प्रेश विज्ञप्ति तथा अन्य व्यापारिक सूचनाहरू सम्प्रेषण गर्न र प्राप्त गर्न एउटा सजिलो माध्यम !!
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+    </header>
 @endsection

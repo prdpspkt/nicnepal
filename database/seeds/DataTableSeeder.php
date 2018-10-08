@@ -12,6 +12,16 @@ class DataTableSeeder extends Seeder
      */
     public function run()
     {
+       $office = new App\OfficeType();
+       $office->name = "Government";
+       $office->slug = "false";
+       $office->save();
+
+       $notice = new App\NoticeType();
+       $notice->slug = "false";
+       $notice->name = "Public";
+       $notice->save();
+
         $company = new \App\Company();
         $company->name = "Public Service Commission";
         $company->address = "Anamnagar, Kathmandu";

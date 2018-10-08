@@ -21,11 +21,9 @@
                             <td>{{$notice->description}}</td>
                             <td>{{$notice->notice_type->name}}</td>
                             <td>{{$notice->published}}</td>
-                            <th><a class="btn btn-sm btn-success" href="/notices/show/{{$notice->id}}">View</a> </th>
-                            <th><a class="btn btn-sm btn-primary" href="/notices/edit/{{$notice->id}}">Edit</a> </th>
-                            <th><a class="btn btn-sm btn-danger" href="/notices/delete/{{$notice->id}}">Delete</a> </th>
-                            <th></th>
-                            <th></th>
+                            <td><a class="btn btn-sm btn-success" href="/notices/show/{{$notice->id}}">View</a> </td>
+                            <td><a class="btn btn-sm btn-primary" href="/notices/edit/{{$notice->id}}">Edit</a> </td>
+                            <td><a class="btn btn-sm btn-danger" href="/notices/delete/{{$notice->id}}">Delete</a> </td>
                         </tr>
                     @endforeach
                         @endif

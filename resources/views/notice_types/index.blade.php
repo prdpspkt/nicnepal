@@ -14,8 +14,8 @@
                     @foreach($notice_types as $notice)
                         <tr>
                             <td>{{$notice->name}}</td>
-                            <th><a class="btn btn-sm btn-primary" href="/notice_types/edit/{{$notice->id}}">Edit</a> </th>
-                            <th><a class="btn btn-sm btn-danger" href="/notice_types/delete/{{$notice->id}}">Delete</a> </th>
+                            <td><a class="btn btn-sm btn-primary" href="/notice_types/edit/{{$notice->id}}">Edit</a> </td>
+                            <td><a class="btn btn-sm btn-danger" href="/notice_types/delete/{{$notice->id}}">Delete</a> </td>
                         </tr>
                     @endforeach
                         @endif

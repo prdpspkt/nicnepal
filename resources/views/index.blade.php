@@ -37,8 +37,13 @@
                     <small>National Information Center</small></h5>
             </div>
         </div>
-          <a class="btn btn-success" href="#">Download App</a>
-        <a class="btn btn-primary" href="/companies">PUBLISH YOUR NOTICE</a>
+        <a class="btn btn-success" href="#">Download App</a>
+        @guest
+        <a class="btn btn-primary" href="/login">Get Started</a>
+        @else
+        <h6>Hi, {{Auth::user()->name}}</h6>
+        <a class="btn btn-primary" href="/home">Go to Dashboard</a>
+        @endguest
       </div>
     </nav>
 

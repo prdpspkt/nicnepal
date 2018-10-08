@@ -23,12 +23,10 @@
                             <td>{{$company->address}}</td>
                             <td>{{$company->phone}}</td>
                             <td>{{$company->email}}</td>
-                            <th><a class="btn btn-sm btn-success" href="/companies/show/{{$company->id}}">View</a> </th>
-                            <th><a class="btn btn-sm btn-primary" href="/companies/edit/{{$company->id}}">Edit</a> </th>
-                            <th><a class="btn btn-sm btn-danger" href="/companies/delete/{{$company->id}}">Delete</a> </th>
-                            <th></th>
-                            <th></th>
-                        </tr>
+                            <td><a class="btn btn-sm btn-success" href="/companies/show/{{$company->id}}">View</a> </td>
+                            <td><a class="btn btn-sm btn-primary" href="/companies/edit/{{$company->id}}">Edit</a> </td>
+                            <td><a class="btn btn-sm btn-danger" href="/companies/delete/{{$company->id}}">Delete</a> </td>
+                           </tr>
                     @endforeach
                         @endif
                 </table>
