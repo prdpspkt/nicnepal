@@ -3,29 +3,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3>Notices<a href="/notices/add" class="btn btn-sm btn-success float-right">Add a Notice</a></h3>
+                <h3>Notice Types<a href="/notice_types/add" class="btn btn-sm btn-success float-right">Add a Type</a></h3>
                 <table class="table table-striped">
                     <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Notice Type</th>
-                        <th>Published</th>
-                        <th></th>
+                        <th>Name</th>
                         <th></th>
                         <th></th>
                     </tr>
-                    @if($notices != null)
-                    @foreach($notices as $notice)
+                    @if($notice_types != null)
+                    @foreach($notice_types as $notice)
                         <tr>
-                            <td>{{$notice->title}}</td>
-                            <td>{{$notice->description}}</td>
-                            <td>{{$notice->notice_type}}</td>
-                            <td>{{$notice->published}}</td>
-                            <th><a class="btn btn-sm btn-success" href="/notices/show/{{$notice->id}}">View</a> </th>
-                            <th><a class="btn btn-sm btn-primary" href="/notices/edit/{{$notice->id}}">Edit</a> </th>
-                            <th><a class="btn btn-sm btn-danger" href="/notices/delete/{{$notice->id}}">Delete</a> </th>
-                            <th></th>
-                            <th></th>
+                            <td>{{$notice->name}}</td>
+                            <th><a class="btn btn-sm btn-primary" href="/notice_types/edit/{{$notice->id}}">Edit</a> </th>
+                            <th><a class="btn btn-sm btn-danger" href="/notice_types/delete/{{$notice->id}}">Delete</a> </th>
                         </tr>
                     @endforeach
                         @endif

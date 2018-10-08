@@ -6,23 +6,17 @@
     <div class="container">
        <form class="row" method="post" action="/notice_types/add">
             <div class="col-md-8">
-                <h3>Add a new Notice Type</h3>
+                <h3>Add Notice Type</h3>
                 
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
 
                     <div class="form-group">
                         <label>Name: </label>
-                        <input class="form-control" type="text" name="title" placeholder="title of notice_type" required>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label>Slug: </label>
-                        <textarea class="form-control" id="content" name="content"></textarea>
+                        <input class="form-control" type="text" name="name" placeholder="name of notice type" required>
                     </div>
 
                    <div class="form-group">
-                     <input type="submit" class="btn btn-sm btn-success" required value="Publish"/>
+                     <input type="submit" class="btn btn-sm btn-success" required value="Add"/>
             </div>
 
 

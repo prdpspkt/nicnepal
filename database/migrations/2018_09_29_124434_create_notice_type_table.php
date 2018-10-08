@@ -16,7 +16,7 @@ class CreateNoticeTypeTable extends Migration
         Schema::create('notice_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug')->nullable(true);
             $table->timestamps();
         });
     }

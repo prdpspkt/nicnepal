@@ -9,8 +9,6 @@ use Auth;
 
 class NoticeController extends Controller
 {
-
-
     public function __construct()
     {
         $this->middleware('auth');

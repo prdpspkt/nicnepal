@@ -400,6 +400,7 @@ class ComposerStaticInit951211a8b56a369ceef25ae847a5b69c
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\NoticeController' => __DIR__ . '/../..' . '/app/Http/Controllers/NoticeController.php',
         'App\\Http\\Controllers\\NoticeTypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/NoticeTypeController.php',
+        'App\\Http\\Controllers\\OfficeTypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/OfficeTypeController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
