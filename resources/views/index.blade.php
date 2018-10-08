@@ -29,15 +29,16 @@
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <img src="/images/default_logo.gif">
             </div>
-            <div class="col-md-10">
-                <h2>राष्ट्रिय सूचना केन्द्र <br>
-                    <small>National Information Center</small></h2>
+            <div class="col-md-9">
+                <h5>राष्ट्रिय सूचना केन्द्र <br>
+                    <small>National Information Center</small></h5>
             </div>
         </div>
-        <a class="btn btn-primary" href="#">Sign In</a>
+          <a class="btn btn-success" href="#">Download App</a>
+        <a class="btn btn-primary" href="#">Publish your Notice</a>
       </div>
     </nav>
 
@@ -47,17 +48,12 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
+            <h1 class="mb-5">सबै सूचनाहरू तथा जानकारीहरू अब तपाईको हातमै !!</h1>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <form>
               <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-                </div>
-                <div class="col-12 col-md-3">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                </div>
+                <p> सार्वजनिक सूचना, जनहितमा जारी सूचना, रोजगार सम्बन्धी सूचना, कुनै कार्यक्रम सम्बन्धी जानकारी, प्रेश विज्ञप्ति तथा अन्य व्यापारिक सूचनाहरू सम्प्रेषण गर्न र प्राप्त गर्न एउटा सजिलो माध्यम !!</p>
               </div>
             </form>
           </div>
