@@ -13,7 +13,7 @@
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <div class="form-group">
                     <label>Organization: </label>
-                    {!! Form::select('company_id', $offices,null, ['class' => 'form-control']) !!}
+                    {!! Form::select('company_id', $offices,null, ['class' => 'form-control', 'require' => 'true']) !!}
                 </div>
                 <div class="form-group">
                     <label>Title: </label>
