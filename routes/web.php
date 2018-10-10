@@ -59,3 +59,6 @@ Route::get("/notice_types/delete/{id}", "NoticeTypeController@delete");
 
 //API Section
 Route::get("/api/notices", "ApiController@index");
+Route::get("/api/offices", "ApiController@offices");
+Route::get("/api/notice_types", "ApiController@notice_types");
+
