@@ -13,10 +13,11 @@ class ApiController extends Controller
        $notices_data = [];
        foreach($notices as $notice){
             $notice_data = $notice;
-            echo $notice_data['office_name'] = $notice->company['name'];
             unset($notice_data['company']);
             $notice_data['user_name'] = $notice->user['name'];
+            $notice_data['notice_type'] = $notice->noticetype['slug'];
             unset($notice_data['user']);
+            unset($notice_data['noticetype']);
             array_push($notices_data, $notice_data);
        }
        return json_encode($notices_data);
