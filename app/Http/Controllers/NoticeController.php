@@ -41,7 +41,7 @@ class NoticeController extends Controller
             "title" => $title,
             "description" => $description,
             "content" => $content,
-            "notice_type"=> $notice_type,
+            "notice_type_id"=> $notice_type,
             "notice_url" => $notice_url,
             "published" => $published,
             "company_id" => $company_id,
