@@ -13,7 +13,7 @@ class Notice extends Model
         return $this->belongsTo('App\User');
     }
 
-    function noticetype(){
+    function notice_type(){
         return $this->belongsTo('App\NoticeType');
     }
 

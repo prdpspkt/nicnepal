@@ -15,9 +15,8 @@ class ApiController extends Controller
             $notice_data = $notice;
             unset($notice_data['company']);
             $notice_data['user_name'] = $notice->user['name'];
-            $notice_data['notice_type'] = $notice->noticetype['slug'];
+            $notice_data['notice_type'] = $notice->notice_type['slug'];
             unset($notice_data['user']);
-            unset($notice_data['noticetype']);
             array_push($notices_data, $notice_data);
        }
        return json_encode($notices_data);
