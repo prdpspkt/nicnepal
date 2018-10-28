@@ -15,6 +15,11 @@
                         <input class="form-control" type="text" name="name" placeholder="name of notice type" required>
                     </div>
 
+                <div class="form-group">
+                    <label>Slug: </label>
+                    <input class="form-control" type="text" name="slug" placeholder="english name in small letter and underscore only" required>
+                </div>
+
                    <div class="form-group">
                      <input type="submit" class="btn btn-sm btn-success" required value="Add"/>
             </div>

@@ -14,6 +14,10 @@
                     <label>Name: </label>
                     <input class="form-control" type="text" value="{{$notice_type->name}}" name="name" required>
                 </div>
+                <div class="form-group">
+                    <label>Slug: </label>
+                    <input class="form-control" type="text" name="slug" value="{{$notice_type->slug}}" placeholder="english name in small letter and underscore only" required>
+                </div>
 
                 <div class="form-group">
                     <input type="submit" class="btn btn-sm btn-success" required value="Update"/>

@@ -33,7 +33,7 @@ class NoticeTypeController extends Controller
             $name = $request->input('name');
             $notice_type = new NoticeType();
             $notice_type->name = $name;
-            $notice_type->slug = "false";
+            $notice_type->slug = $request->input('slug');
             $notice_type->save();
         }
         return redirect("/notice_types");
