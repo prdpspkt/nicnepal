@@ -31,9 +31,10 @@ class NoticeTypeController extends Controller
     {
         if ($this->canCreateOrChange()) {
             $name = $request->input('name');
+            $slug = $request->input('slug');
             $notice_type = new NoticeType();
             $notice_type->name = $name;
-            $notice_type->slug = $request->input('slug');
+            $notice_type->slug = $slug;
             $notice_type->save();
         }
         return redirect("/notice_types");
@@ -43,8 +44,10 @@ class NoticeTypeController extends Controller
     {
         if ($this->canCreateOrChange()) {
             $name = $request->input('name');
+            $slug = $request->input('slug');
             $notice_type = NoticeType::find($request->id);
             $notice_type->name = $name;
+            $notice_type->slug = $slug;
             $notice_type->save();
         }
         return redirect("/notice_types");

@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <script src="/tinymce/js/tinymce/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'#content' });</script>
     <div class="container">
         <form class="row" method="post" action="/office_types/edit/{{$office_type->id}}">
             <div class="col-md-8">
@@ -13,6 +11,11 @@
                 <div class="form-group">
                     <label>Name: </label>
                     <input class="form-control" type="text" value="{{$office_type->name}}" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Slug: </label>
+                    <input class="form-control" type="text" name="slug" value="{{$office_type->slug}}" required>
                 </div>
 
                 <div class="form-group">

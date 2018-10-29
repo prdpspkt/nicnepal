@@ -33,9 +33,10 @@ class OfficeTypeController extends Controller
     {
         $this->check();
         $name = $request->input('name');
+        $slug = $request->input("slug");
         $office_type = new OfficeType();
         $office_type->name = $name;
-        $office_type->slug = "false";
+        $office_type->slug = $slug;
         $office_type->save();
 
         return redirect("/office_types");
@@ -45,8 +46,10 @@ class OfficeTypeController extends Controller
     {
         $this->check();
         $name = $request->input('name');
+        $slug = $request->input("slug");
         $office_type = OfficeType::find($request->id);
         $office_type->name = $name;
+        $office_type->slug = $slug;
         $office_type->save();
         return redirect("/office_types");
     }

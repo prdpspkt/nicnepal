@@ -58,7 +58,8 @@ Route::post("/notice_types/edit/{id}", "NoticeTypeController@update");
 Route::get("/notice_types/delete/{id}", "NoticeTypeController@delete");
 
 //API Section
-Route::get("/api/notices", "ApiController@index");
-Route::get("/api/offices", "ApiController@offices");
-Route::get("/api/notice_types", "ApiController@notice_types");
+Route::get("/api/v1", "ApiController@index");
+Route::get("/api/v1/offices/{id}", "ApiController@offices");
+Route::get("/api/v1/otypes/{id}", "ApiController@office_types");
+Route::get("/api/v1/ntypes/{id}", "ApiController@notice_types");
 

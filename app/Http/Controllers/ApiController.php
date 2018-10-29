@@ -5,30 +5,35 @@ namespace App\Http\Controllers;
 use App\Company;
 use App\Notice;
 use App\NoticeType;
+use App\OfficeType;
+use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
    function index(){
        $notices = Notice::orderBy("created_at", "desc")->get();
-       $notices_data = [];
-       foreach($notices as $notice){
-            $notice_data = $notice;
-            unset($notice_data['company']);
-            $notice_data['user_name'] = $notice->user['name'];
-            $notice_data['notice_type'] = $notice->notice_type['slug'];
-            unset($notice_data['user']);
-            array_push($notices_data, $notice_data);
-       }
-       return json_encode($notices_data);
+       $nTypes = NoticeType::orderBy("name", "asc")->get();
+       $offices = Company::orderBy("name", "asc")->get();
+       $oTypes = OfficeType::orderBy("name", "asc")->get();
+       $complete['notices'] = $notices;
+       $complete["offices"] = $offices;
+       $complete['office_types'] = $oTypes;
+       $complete['notice_types']= $nTypes;
+       return json_encode($complete);
   }
 
-  function offices(){
-       $offices = Company::orderBy("name", 'asc')->get();
+  function offices($id){
+       $offices = Company::where("id", ">", $id)->orderBy("name", 'asc')->get();
        return json_encode($offices);
   }
 
-  function notice_types(){
-       $notice_types = NoticeType::orderBy("name", "asc");
+  function office_types($id){
+           $office_types = OfficeType::where("id", ">", $id)->orderBy('name', "asc")->get();
+      return json_encode($office_types);
+  }
+
+  function notice_types($id){
+       $notice_types = NoticeType::where("id",">", $id)->orderBy("name", "asc")->get();
        return json_encode($notice_types);
   }
 }
