@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>NIC - (राष्ट्रिय सूचना केन्द्र) National Information Center</title>
+    <title>सूचना केन्द्र - Information Center</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,12 +29,8 @@
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <img style="width: 50px;" src="/images/default_logo.gif">
-            </div>
-            <div class="col-md-9">
-                <h5>राष्ट्रिय सूचना केन्द्र <br>
-                    <small>National Information Center</small></h5>
+            <div class="col-md-12">
+                   <h1>Informatin Center</h1>
             </div>
         </div>
         <a class="btn btn-success" href="#">Download App</a>
