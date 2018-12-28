@@ -8,24 +8,26 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>सार्वजनिक सूचना केन्द्र</title>
-
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+     <link href="https://fonts.googleapis.com/css?family=Eczar:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:500&subset=devanagari" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/landing-page.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-               <img title="Public Information Center" alt="सार्वजनिक सूचना केन्द्र" src="/images/logo.png" class="img-fluid">
-            </a>
+        <div class="row">
+                   <img title="Public Information Center" alt="सार्वजनिक सूचना केन्द्र" src="/images/default_logo.gif" class="img-fluid float-left"/>
+                   <h1 style="font-family: 'Eczar', serif; font-size: 20px; margin-top: 10px; width: 220px">Public Information Center</h1>
+        </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
