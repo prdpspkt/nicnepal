@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>सूचना केन्द्र - Information Center</title>
+    <title>सार्वजनिक सूचना केन्द्र - Public Information Center</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
       <div class="container">
         <div class="row">
             <div class="col-md-12">
-                   <h1>Informatin Center</h1>
+                   <img title="Public Information Center" alt="सार्वजनिक सूचना केन्द्र" src="/images/logo.png" class="img-fluid">
             </div>
         </div>
         <a class="btn btn-success" href="#">Download App</a>
